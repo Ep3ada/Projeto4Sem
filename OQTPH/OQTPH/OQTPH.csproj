@@ -66,6 +66,8 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\css\style.css" />
+    <Content Include="assets\javascript\script.js" />
     <Content Include="CriarEvento.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="packages.config" />
@@ -99,7 +101,7 @@
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Models\EV.cs" />
+    <Compile Include="Models\Evento.cs" />
     <Compile Include="Models\Usuario.cs" />
     <Compile Include="Perfil.aspx.cs">
       <DependentUpon>Perfil.aspx</DependentUpon>

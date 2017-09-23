@@ -7,19 +7,17 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <title>Criar Evento - OQTPH</title>
+    
     <script src="/assets/javascript/script.js" type="text/javascript"></script>
 
     <!-- Bootstrap -->
     <link href="/assets/css/style.css" rel="stylesheet" runat="server" />
     <link rel="icon" type="image/x-icon" href="~/logo.ico" />
-    <style type="text/css">
-    </style>
-
 </head>
 <body>
     <form id="form1" runat="server">
-
         <nav>
             <div class="container">
                 <div class="collapse navbar-collapse">
@@ -64,7 +62,7 @@
 
                 <div>
                     <div>
-                        <asp:PlaceHolder runat="server" Visible="false" ID="phEv">
+                        <asp:PlaceHolder runat="server" Visible="false" ID="placeholderEvento">
                             <div>
                                 <div>
                                     <asp:Label Text="Imagem atual:" runat="server" />
