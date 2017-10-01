@@ -10,7 +10,7 @@
 namespace OQTPH {
     
     
-    public partial class CriarEvento {
+    public partial class Dados {
         
         /// <summary>
         /// form1 control.
@@ -22,6 +22,24 @@ namespace OQTPH {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
+        /// PHin control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.PlaceHolder PHin;
+        
+        /// <summary>
+        /// PHout control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.PlaceHolder PHout;
+        
+        /// <summary>
         /// aOUT control.
         /// </summary>
         /// <remarks>
@@ -31,166 +49,112 @@ namespace OQTPH {
         protected global::System.Web.UI.WebControls.LinkButton aOUT;
         
         /// <summary>
-        /// placeholderEvento control.
+        /// ph1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder placeholderEvento;
+        protected global::System.Web.UI.WebControls.PlaceHolder ph1;
         
         /// <summary>
-        /// img control.
+        /// lblNome control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlImage img;
+        protected global::System.Web.UI.WebControls.Label lblNome;
         
         /// <summary>
-        /// up control.
+        /// txtNome control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload up;
+        protected global::System.Web.UI.WebControls.TextBox txtNome;
         
         /// <summary>
-        /// txtNomeEv control.
+        /// ph2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNomeEv;
+        protected global::System.Web.UI.WebControls.PlaceHolder ph2;
         
         /// <summary>
-        /// txtHR control.
+        /// lblEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtHR;
+        protected global::System.Web.UI.WebControls.Label lblEmail;
         
         /// <summary>
-        /// txtValEv control.
+        /// txtEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtValEv;
+        protected global::System.Web.UI.WebControls.TextBox txtEmail;
         
         /// <summary>
-        /// txtIngEv control.
+        /// ph3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtIngEv;
+        protected global::System.Web.UI.WebControls.PlaceHolder ph3;
         
         /// <summary>
-        /// dropCatg control.
+        /// lblUserN control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList dropCatg;
+        protected global::System.Web.UI.WebControls.Label lblUserN;
         
         /// <summary>
-        /// txtDescEv control.
+        /// txtUserN control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDescEv;
+        protected global::System.Web.UI.WebControls.TextBox txtUserN;
         
         /// <summary>
-        /// txtfone control.
+        /// txtSenha control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtfone;
+        protected global::System.Web.UI.WebControls.TextBox txtSenha;
         
         /// <summary>
-        /// txtEnd control.
+        /// btn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtEnd;
+        protected global::System.Web.UI.WebControls.Button btn;
         
         /// <summary>
-        /// txtNroEnd control.
+        /// btnUp control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNroEnd;
-        
-        /// <summary>
-        /// txtBairroEnd control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtBairroEnd;
-        
-        /// <summary>
-        /// txtCid control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCid;
-        
-        /// <summary>
-        /// txtEst control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtEst;
-        
-        /// <summary>
-        /// txtDT control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDT;
-        
-        /// <summary>
-        /// btnCriar control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCriar;
-        
-        /// <summary>
-        /// btnAtualiza control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnAtualiza;
+        protected global::System.Web.UI.WebControls.Button btnUp;
         
         /// <summary>
         /// btnVoltar control.

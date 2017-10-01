@@ -11,7 +11,7 @@
 
     <!-- Bootstrap -->
     <link href="/assets/css/style.css" rel="stylesheet" runat="server" />
-    <link rel="icon" type="image/x-icon" href="~/logo.ico" />
+    <link rel="icon" type="image/x-icon" href="/assets/images/logoAba.ico" />
     <style type="text/css"></style>
 
 </head>
@@ -28,7 +28,7 @@
                     <ul class="nav navbar-nav">
                         <li class="active"></li>
                         <a href="Default.aspx">
-                            <img src="/image/logosite.png" width="62" height="62" alt="" /></a>
+                            <img src="/assets/images/logoSite.png" width="62" height="62" alt="" /></a>
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right hidden-sm">
@@ -51,7 +51,7 @@
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <div class="carousel-inner">
                         <div class="item active">
-                            <img class="img-responsive" src="/image/banner.jpg" alt="thumb" />
+                            <img class="img-responsive" src="/assets/images/bannerSite.jpg" alt="thumb" />
                         </div>
                     </div>
                 </div>

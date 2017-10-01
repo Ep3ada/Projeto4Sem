@@ -69,6 +69,7 @@
     <Content Include="assets\css\style.css" />
     <Content Include="assets\javascript\script.js" />
     <Content Include="CriarEvento.aspx" />
+    <Content Include="Default.aspx" />
     <Content Include="Evento.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="packages.config" />
@@ -91,6 +92,13 @@
     </Compile>
     <Compile Include="CriarEvento.aspx.designer.cs">
       <DependentUpon>CriarEvento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Evento.aspx.cs">
       <DependentUpon>Evento.aspx</DependentUpon>
