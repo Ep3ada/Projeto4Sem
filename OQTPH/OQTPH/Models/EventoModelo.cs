@@ -5,7 +5,7 @@ using System.Web;
 
 namespace OQTPH
 {
-    public class Evento
+    public class EventoModelo
     {
         public int eventoID { get; set; }
         public string eventoNome { get; set; }

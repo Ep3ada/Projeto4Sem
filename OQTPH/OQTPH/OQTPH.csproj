@@ -69,6 +69,7 @@
     <Content Include="assets\css\style.css" />
     <Content Include="assets\javascript\script.js" />
     <Content Include="CriarEvento.aspx" />
+    <Content Include="Evento.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="packages.config" />
     <None Include="Web.Debug.config">
@@ -91,6 +92,13 @@
     <Compile Include="CriarEvento.aspx.designer.cs">
       <DependentUpon>CriarEvento.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Evento.aspx.cs">
+      <DependentUpon>Evento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Evento.aspx.designer.cs">
+      <DependentUpon>Evento.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -101,8 +109,8 @@
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Models\Evento.cs" />
-    <Compile Include="Models\Usuario.cs" />
+    <Compile Include="Models\EventoModelo.cs" />
+    <Compile Include="Models\UsuarioModelo.cs" />
     <Compile Include="Perfil.aspx.cs">
       <DependentUpon>Perfil.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -116,7 +124,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="image\" />
+    <Folder Include="assets\images\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

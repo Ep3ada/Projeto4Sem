@@ -13,7 +13,7 @@ namespace OQTPH
 {
     public partial class CriarEvento : System.Web.UI.Page
     {
-        Usuario _usuario;
+        UsuarioModelo _usuario;
 
         //será true se o usuário que estiver tentando acessar
         //a página com id do evento for o criador do mesmo
@@ -27,7 +27,7 @@ namespace OQTPH
         protected void Page_Load(object sender, EventArgs e)
         {
             //verifica se usuario está logado, se não estiver redireciona para a página de Login
-            _usuario = Usuario.Validar();
+            _usuario = UsuarioModelo.Validar();
 
             if (_usuario == null)
             {

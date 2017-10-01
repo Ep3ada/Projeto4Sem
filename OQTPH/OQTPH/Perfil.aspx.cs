@@ -12,14 +12,14 @@ namespace OQTPH
 {
     public partial class Perfil : System.Web.UI.Page
     {
-        Usuario _usuario;
-        public List<Evento> _eventosCriados = new List<Evento>();
-        public List<Evento> _eventosAdquiridos = new List<Evento>();
-        public List<Evento> _eventosAlerta = new List<Evento>();
+        UsuarioModelo _usuario;
+        public List<EventoModelo> _eventosCriados = new List<EventoModelo>();
+        public List<EventoModelo> _eventosAdquiridos = new List<EventoModelo>();
+        public List<EventoModelo> _eventosAlerta = new List<EventoModelo>();
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            _usuario = Usuario.Validar();
+            _usuario = UsuarioModelo.Validar();
             if (_usuario == null)
             {
                 Response.Redirect("~/Default.aspx");
@@ -65,7 +65,7 @@ namespace OQTPH
                                     ListItem item = new ListItem(reader.GetString(1), reader.GetInt32(0).ToString());
                                     dropEC.Items.Add(item);
 
-                                    Evento evento = new Evento { eventoID = reader.GetInt32(0), eventoNome = reader.GetString(1), eventoData = reader.GetDateTime(2) };
+                                    EventoModelo evento = new EventoModelo { eventoID = reader.GetInt32(0), eventoNome = reader.GetString(1), eventoData = reader.GetDateTime(2) };
 
                                     _eventosCriados.Add(evento);
 
@@ -94,7 +94,7 @@ namespace OQTPH
                                 while (reader.Read() == true)
                                 {
 
-                                    Evento evento = new Evento { eventoID = reader.GetInt32(0), eventoNome = reader.GetString(1), eventoData = reader.GetDateTime(2), eventoDataCompra = reader.GetDateTime(3) };
+                                    EventoModelo evento = new EventoModelo { eventoID = reader.GetInt32(0), eventoNome = reader.GetString(1), eventoData = reader.GetDateTime(2), eventoDataCompra = reader.GetDateTime(3) };
 
                                     _eventosAdquiridos.Add(evento);
                                 }
@@ -151,7 +151,7 @@ namespace OQTPH
                                     {
 
 
-                                        Evento evento = new Evento() { eventoID = reader.GetInt32(0), eventoNome = reader.GetString(1), eventoData = reader.GetDateTime(2) };
+                                        EventoModelo evento = new EventoModelo() { eventoID = reader.GetInt32(0), eventoNome = reader.GetString(1), eventoData = reader.GetDateTime(2) };
                                         _eventosAlerta.Add(evento);
                                     }
 
@@ -241,7 +241,7 @@ namespace OQTPH
                                 _eventosAlerta.Clear();
                                 while (reader.Read())
                                 {
-                                    Evento evento = new Evento() { eventoID = reader.GetInt32(0), eventoNome = reader.GetString(1), eventoData = reader.GetDateTime(2) };
+                                    EventoModelo evento = new EventoModelo() { eventoID = reader.GetInt32(0), eventoNome = reader.GetString(1), eventoData = reader.GetDateTime(2) };
                                     _eventosAlerta.Add(evento);
 
                                 }

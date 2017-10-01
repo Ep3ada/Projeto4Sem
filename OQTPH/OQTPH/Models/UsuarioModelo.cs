@@ -9,7 +9,7 @@ using OQTPH.Utils;
 
 namespace OQTPH.Models
 {
-    public class Usuario
+    public class UsuarioModelo
     {
         public const int TamanhoMaximoDoUserN = 15;
         public const int TamanhoMaximoDoNome = 30;
@@ -21,7 +21,7 @@ namespace OQTPH.Models
         public string Email;
         public string Token;
 
-        public Usuario(int id, string usern, string nome, string email, string token)
+        public UsuarioModelo(int id, string usern, string nome, string email, string token)
         {
             Id = id;
             UserN = usern;
@@ -30,7 +30,7 @@ namespace OQTPH.Models
             Token = token;
         }
 
-        private static Usuario PegarDoCliente()
+        private static UsuarioModelo PegarDoCliente()
         {
             HttpCookie cookie = HttpContext.Current.Request.Cookies["user"];
             if (cookie == null)
@@ -45,7 +45,7 @@ namespace OQTPH.Models
             }
 
             // O objeto Usuario que vem do cliente tem apenas o Id e o Token
-            return new Usuario(int.Parse(values[0]), "", "", "", values[1]);
+            return new UsuarioModelo(int.Parse(values[0]), "", "", "", values[1]);
         }
 
         private string EnviarParaCliente()
@@ -70,7 +70,7 @@ namespace OQTPH.Models
             HttpContext.Current.Response.SetCookie(cookie);
         }
 
-        public static Usuario Criar(string nome, string email, string usern, string senha)
+        public static UsuarioModelo Criar(string nome, string email, string usern, string senha)
         {
             if (string.IsNullOrWhiteSpace(usern) || usern.Length > TamanhoMaximoDoUserN)
             { throw new Exception("Username inválido!"); }
@@ -104,14 +104,14 @@ namespace OQTPH.Models
                     int id = (int)command.ExecuteScalar();
 
                     // Como esse usuário acabou de ser criado, ele não está logado, por isso não tem token
-                    return new Usuario(id, usern, nome, email, "");
+                    return new UsuarioModelo(id, usern, nome, email, "");
                 }
             }
         }
 
-        public static Usuario Validar()
+        public static UsuarioModelo Validar()
         {
-            Usuario usuario = PegarDoCliente();
+            UsuarioModelo usuario = PegarDoCliente();
             if (usuario == null)
             { return null; }
 
@@ -144,9 +144,9 @@ namespace OQTPH.Models
             return usuario;
         }
 
-        public static Usuario ValidarException()
+        public static UsuarioModelo ValidarException()
         {
-            Usuario usuario = Validar();
+            UsuarioModelo usuario = Validar();
             if (usuario == null)
             { throw new Exception("Usuário inválido ou não conectado"); }
 
@@ -183,7 +183,7 @@ namespace OQTPH.Models
 
                         command.ExecuteNonQuery();
                         // Tanto o nome quanto o login não interessam para enviar para o cliente
-                        Usuario usuario = new Usuario(id, "", "", "", token);
+                        UsuarioModelo usuario = new UsuarioModelo(id, "", "", "", token);
                         return usuario.EnviarParaCliente();
                     }
                 }

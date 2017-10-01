@@ -10,10 +10,10 @@ namespace OQTPH
 {
     public partial class Login : System.Web.UI.Page
     {
-        Usuario _usuario;
+        UsuarioModelo _usuario;
         protected void Page_Load(object sender, EventArgs e)
         {
-            _usuario = Usuario.Validar();
+            _usuario = UsuarioModelo.Validar();
             if (_usuario != null)
             {
                 Response.Redirect("~/Perfil.aspx");
@@ -23,7 +23,7 @@ namespace OQTPH
 
         protected void btnLogar_Click(object sender, EventArgs e)
         {
-            if (Usuario.FazerLogin(txtUserN.Text.Trim(), txtSenha.Text.Trim()) != null)
+            if (UsuarioModelo.FazerLogin(txtUserN.Text.Trim(), txtSenha.Text.Trim()) != null)
             {
                 if (Request.QueryString["p"] == "Ev")
                 {
