@@ -69,10 +69,12 @@
     <Content Include="assets\css\style.css" />
     <Content Include="assets\javascript\script.js" />
     <Content Include="CriarEvento.aspx" />
+    <Content Include="Dados.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Evento.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="packages.config" />
+    <Content Include="ImageHandler.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -93,6 +95,13 @@
     <Compile Include="CriarEvento.aspx.designer.cs">
       <DependentUpon>CriarEvento.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Dados.aspx.cs">
+      <DependentUpon>Dados.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dados.aspx.designer.cs">
+      <DependentUpon>Dados.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -109,6 +118,9 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="ImageHandler.ashx.cs">
+      <DependentUpon>ImageHandler.ashx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
