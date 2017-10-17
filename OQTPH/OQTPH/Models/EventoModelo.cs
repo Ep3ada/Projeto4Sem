@@ -7,9 +7,9 @@ namespace OQTPH
 {
     public class EventoModelo
     {
-        public int eventoID { get; set; }
-        public string eventoNome { get; set; }
-        public DateTime eventoData { get; set; }
-        public DateTime eventoDataCompra { get; set; }
+        public int ID { get; set; }
+        public string Nome { get; set; }
+        public DateTime Data { get; set; }
+        public DateTime DataCompra { get; set; }
     }
 }

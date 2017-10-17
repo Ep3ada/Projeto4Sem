@@ -129,7 +129,9 @@
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Models\Endereco.cs" />
     <Compile Include="Models\EventoModelo.cs" />
+    <Compile Include="Models\PerfilModelo.cs" />
     <Compile Include="Models\UsuarioModelo.cs" />
     <Compile Include="Perfil.aspx.cs">
       <DependentUpon>Perfil.aspx</DependentUpon>
