@@ -29,6 +29,12 @@ namespace OQTPH.Models
             Email = email;
             Token = token;
         }
+        
+        public UsuarioModelo(int id, string token)
+        {
+            Id = id;
+            Token = token;
+        }
 
         private static UsuarioModelo PegarDoCliente()
         {
@@ -45,7 +51,7 @@ namespace OQTPH.Models
             }
 
             // O objeto Usuario que vem do cliente tem apenas o Id e o Token
-            return new UsuarioModelo(int.Parse(values[0]), "", "", "", values[1]);
+            return new UsuarioModelo(int.Parse(values[0]), values[1]);
         }
 
         private string EnviarParaCliente()
