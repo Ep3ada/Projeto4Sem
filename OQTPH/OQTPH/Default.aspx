@@ -95,10 +95,10 @@
 
                                 <div class="col-sm-4 col-md-4 col-lg-4 col-xs-6">
                                     <div class="thumbnail">
-                                        <img src="Imagehandler.ashx?idimgev=<%=lista[i].eventoID %>" alt="<%=lista[i].eventoNome %>" width="332" height="232" />
+                                        <img src="Imagehandler.ashx?idimgev=<%=lista[i].Id %>" alt="<%=lista[i].Nome %>" width="332" height="232" />
                                         <div class="caption">
-                                            <h3><%=lista[i].eventoNome %></h3>
-                                            <p><a href="Evento.aspx?evento=<%=lista[i].eventoID %>" class="btn btn-primary" role="button"><span aria-hidden="true"></span>Comprar</a></p>
+                                            <h3><%=lista[i].Nome %></h3>
+                                            <p><a href="Evento.aspx?evento=<%=lista[i].Id %>" class="btn btn-primary" role="button"><span aria-hidden="true"></span>Comprar</a></p>
                                         </div>
                                     </div>
                                 </div>

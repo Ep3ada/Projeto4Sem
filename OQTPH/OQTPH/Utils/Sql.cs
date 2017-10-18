@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Data.SqlClient;
+using System.Web.Configuration;
 
 namespace OQTPH.Utils
 {
@@ -10,7 +11,7 @@ namespace OQTPH.Utils
     {
         public static SqlConnection OpenConnection()
         {
-            SqlConnection conn = new SqlConnection("Server=tcp:ep3serv.database.windows.net,1433;Initial Catalog=EPBD;Persist Security Info=False;User ID=project-master@ep3serv;Password=Band2017;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
+            SqlConnection conn = new SqlConnection(WebConfigurationManager.ConnectionStrings["connectionString"].ConnectionString);
 
             conn.Open();
 

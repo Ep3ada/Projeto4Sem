@@ -7,5 +7,8 @@ namespace OQTPH.Models
 {
     public class PerfilModelo
     {
+        List<EventoModelo> eventosComprados;
+        List<EventoModelo> eventosCriados;
+        List<EventoModelo> eventosFiltrados;
     }
 }

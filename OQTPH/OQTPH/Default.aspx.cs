@@ -6,6 +6,7 @@ using OQTPH.Utils;
 using System.Web.UI.HtmlControls;
 using System.Collections.Generic;
 
+
 namespace OQTPH
 {
     public partial class Default : System.Web.UI.Page
@@ -121,7 +122,7 @@ namespace OQTPH
                                     string nomeEv = reader.GetString(0);
                                     int idEv = reader.GetInt32(1);
 
-                                    EventoModelo evento = new EventoModelo() { eventoID = idEv, eventoNome = nomeEv };
+                                    EventoModelo evento = new EventoModelo() { Id = idEv, Nome = nomeEv };
                                     lista.Add(evento);
                                 }
                             }
@@ -221,7 +222,7 @@ namespace OQTPH
                                     string nomeEv = reader.GetString(0);
                                     int idEv = reader.GetInt32(1);
 
-                                    EventoModelo evento = new EventoModelo() { eventoID = idEv, eventoNome = nomeEv };
+                                    EventoModelo evento = new EventoModelo() { Id = idEv, Nome = nomeEv };
                                     lista.Add(evento);
                                 }
                             }
