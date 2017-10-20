@@ -65,7 +65,7 @@ namespace OQTPH
                                     ListItem item = new ListItem(reader.GetString(1), reader.GetInt32(0).ToString());
                                     dropEC.Items.Add(item);
 
-                                    EventoModelo evento = new EventoModelo { eventoID = reader.GetInt32(0), eventoNome = reader.GetString(1), eventoData = reader.GetDateTime(2) };
+                                    EventoModelo evento = new EventoModelo { Id = reader.GetInt32(0), Nome = reader.GetString(1), Data = reader.GetDateTime(2) };
 
                                     _eventosCriados.Add(evento);
 
@@ -94,7 +94,7 @@ namespace OQTPH
                                 while (reader.Read() == true)
                                 {
 
-                                    EventoModelo evento = new EventoModelo { eventoID = reader.GetInt32(0), eventoNome = reader.GetString(1), eventoData = reader.GetDateTime(2), eventoDataCompra = reader.GetDateTime(3) };
+                                    EventoModelo evento = new EventoModelo { Id = reader.GetInt32(0), Nome = reader.GetString(1), Data = reader.GetDateTime(2), DataCompra = reader.GetDateTime(3) };
 
                                     _eventosAdquiridos.Add(evento);
                                 }
@@ -151,7 +151,7 @@ namespace OQTPH
                                     {
 
 
-                                        EventoModelo evento = new EventoModelo() { eventoID = reader.GetInt32(0), eventoNome = reader.GetString(1), eventoData = reader.GetDateTime(2) };
+                                        EventoModelo evento = new EventoModelo() { Id = reader.GetInt32(0), Nome = reader.GetString(1), Data = reader.GetDateTime(2) };
                                         _eventosAlerta.Add(evento);
                                     }
 
@@ -241,7 +241,7 @@ namespace OQTPH
                                 _eventosAlerta.Clear();
                                 while (reader.Read())
                                 {
-                                    EventoModelo evento = new EventoModelo() { eventoID = reader.GetInt32(0), eventoNome = reader.GetString(1), eventoData = reader.GetDateTime(2) };
+                                    EventoModelo evento = new EventoModelo() { Id = reader.GetInt32(0), Nome = reader.GetString(1), Data = reader.GetDateTime(2) };
                                     _eventosAlerta.Add(evento);
 
                                 }

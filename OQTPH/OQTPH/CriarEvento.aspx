@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CriarEvento.aspx.cs" Inherits="OQTPH.CriarEvento" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CriarEvento.aspx.cs" Inherits="OQTPH.CriarEvento" culture="auto" meta:resourcekey="PageResource1" uiculture="auto" %>
 
 <!DOCTYPE html>
 
@@ -35,7 +35,7 @@
                             <a href="CriaEvento.aspx">Criar Evento</a>&emsp;&emsp;
                             <a href="Perfil.aspx">Perfil</a>&emsp;&emsp;
                             
-                            <asp:LinkButton ID="aOUT" OnClick="aOUT_Click" runat="server">Sair</asp:LinkButton>
+                            <asp:LinkButton ID="aOUT" OnClick="aOUT_Click" runat="server" meta:resourcekey="aOUTResource1">Sair</asp:LinkButton>
 
                         </div>
                     </ul>
@@ -62,13 +62,13 @@
 
                 <div>
                     <div>
-                        <asp:PlaceHolder runat="server" Visible="false" ID="placeholderEvento">
+                        <asp:PlaceHolder runat="server" Visible="False" ID="placeholderEvento">
                             <div>
                                 <div>
-                                    <asp:Label Text="Imagem atual:" runat="server" />
+                                    <asp:Label Text="Imagem atual:" runat="server" meta:resourcekey="LabelResource1" />
                                 </div>
                                 <img runat="server" id="img" src="#" alt="Imagem do Evento" width="332" height="232" />
-                            </div>
+                            &nbsp;</div>
                         </asp:PlaceHolder>
                     </div>
 
@@ -79,7 +79,7 @@
                                 <label for="up">Imagem do evento:</label>
                             </div>
                             <div>
-                                <asp:FileUpload ID="up" runat="server" class="btn btn-primary" role="button" accept="image/*" BorderStyle="Ridge" ValidateRequestMode="Disabled" />
+                                <asp:FileUpload ID="up" runat="server" class="btn btn-primary" role="button" accept="image/*" BorderStyle="Ridge" ValidateRequestMode="Disabled" meta:resourcekey="upResource1" />
                                 <br />
                             </div>
                         </div>
@@ -89,7 +89,7 @@
                                 <label for="txtNomeEv">Nome do evento:</label>
                             </div>
                             <div>
-                                <asp:TextBox runat="server" ID="txtNomeEv" placeholder="Evento Legal" MaxLength="60" BorderStyle="Ridge" />
+                                <asp:TextBox runat="server" ID="txtNomeEv" placeholder="Evento Legal" MaxLength="60" BorderStyle="Ridge" meta:resourcekey="txtNomeEvResource1" />
                             </div>
                         </div>
 
@@ -98,7 +98,7 @@
                                 <label for="txtHR">Hora do evento:</label>
                             </div>
                             <div>
-                                <asp:TextBox runat="server" ID="txtHR" TextMode="Time" BorderStyle="Ridge" />
+                                <asp:TextBox runat="server" ID="txtHR" TextMode="Time" BorderStyle="Ridge" meta:resourcekey="txtHRResource1" />
                             </div>
                         </div>
 
@@ -107,7 +107,7 @@
                                 <label for="txtValEv">Valor:</label>
                             </div>
                             <div>
-                                <asp:TextBox runat="server" ID="txtValEv" placeholder="40" onkeyup="moeda(this)" MaxLength="6" BorderStyle="Ridge" />
+                                <asp:TextBox runat="server" ID="txtValEv" placeholder="40" onkeyup="moeda(this)" MaxLength="6" BorderStyle="Ridge" meta:resourcekey="txtValEvResource1" />
                             </div>
                         </div>
 
@@ -116,7 +116,7 @@
                                 <label for="txtIngEv">Número de Ingressos:</label>
                             </div>
                             <div>
-                                <asp:TextBox runat="server" ID="txtIngEv" placeholder="300" MaxLength="6" onkeyup="formataInteiro(this, event)" BorderStyle="Ridge" />
+                                <asp:TextBox runat="server" ID="txtIngEv" placeholder="300" MaxLength="6" onkeyup="formataInteiro(this, event)" BorderStyle="Ridge" meta:resourcekey="txtIngEvResource1" />
                             </div>
                         </div>
 
@@ -125,20 +125,20 @@
                                 <label for="dropCatg">Categoria:</label>
                             </div>
                             <div>
-                                <asp:DropDownList ID="dropCatg" runat="server">
-                                    <asp:ListItem Text="Selecione..." Value="0" Selected="True" />
-                                    <asp:ListItem Text="Ciência/Tecnologia" Value="Ciência/Tecnologia" />
-                                    <asp:ListItem Text="Show" Value="Show" />
-                                    <asp:ListItem Text="Infantil" Value="Infantil" />
-                                    <asp:ListItem Text="Festa" Value="Festa" />
-                                    <asp:ListItem Text="Teatro" Value="Teatro" />
-                                    <asp:ListItem Text="Concerto" Value="Concerto" />
-                                    <asp:ListItem Text="Stand-up" Value="Stand-up" />
-                                    <asp:ListItem Text="Moda/Beleza" Value="Moda/Beleza" />
-                                    <asp:ListItem Text="Artes" Value="Artes" />
-                                    <asp:ListItem Text="Business" Value="Business" />
-                                    <asp:ListItem Text="Dança" Value="Dança" />
-                                    <asp:ListItem Text="Outras" Value="Outras" />
+                                <asp:DropDownList ID="dropCatg" runat="server" meta:resourcekey="dropCatgResource1">
+                                    <asp:ListItem Text="Selecione..." Value="0" Selected="True" meta:resourcekey="ListItemResource1" />
+                                    <asp:ListItem Text="Ciência/Tecnologia" Value="Ciência/Tecnologia" meta:resourcekey="ListItemResource2" />
+                                    <asp:ListItem Text="Show" Value="Show" meta:resourcekey="ListItemResource3" />
+                                    <asp:ListItem Text="Infantil" Value="Infantil" meta:resourcekey="ListItemResource4" />
+                                    <asp:ListItem Text="Festa" Value="Festa" meta:resourcekey="ListItemResource5" />
+                                    <asp:ListItem Text="Teatro" Value="Teatro" meta:resourcekey="ListItemResource6" />
+                                    <asp:ListItem Text="Concerto" Value="Concerto" meta:resourcekey="ListItemResource7" />
+                                    <asp:ListItem Text="Stand-up" Value="Stand-up" meta:resourcekey="ListItemResource8" />
+                                    <asp:ListItem Text="Moda/Beleza" Value="Moda/Beleza" meta:resourcekey="ListItemResource9" />
+                                    <asp:ListItem Text="Artes" Value="Artes" meta:resourcekey="ListItemResource10" />
+                                    <asp:ListItem Text="Business" Value="Business" meta:resourcekey="ListItemResource11" />
+                                    <asp:ListItem Text="Dança" Value="Dança" meta:resourcekey="ListItemResource12" />
+                                    <asp:ListItem Text="Outras" Value="Outras" meta:resourcekey="ListItemResource13" />
                                 </asp:DropDownList>
                             </div>
                         </div>
@@ -148,7 +148,7 @@
                                 <label for="txtDescEv">Descrição do evento:</label>
                             </div>
                             <div>
-                                <asp:TextBox runat="server" ID="txtDescEv" Rows="6" TextMode="MultiLine" onkeypress="return this.value.length<=700" Width="50%" BorderStyle="Ridge" />
+                                <asp:TextBox runat="server" ID="txtDescEv" Rows="6" TextMode="MultiLine" onkeypress="return this.value.length<=700" Width="50%" BorderStyle="Ridge" meta:resourcekey="txtDescEvResource1" />
                             </div>
                         </div>
 
@@ -157,7 +157,7 @@
                                 <label for="txtfone">Telefone:</label>
                             </div>
                             <div>
-                                <asp:TextBox ID="txtfone" runat="server" placeholder="(11) 7777-7777" MaxLength="15" onkeyup="formataTelefone(this, event)" BorderStyle="Ridge"></asp:TextBox>
+                                <asp:TextBox ID="txtfone" runat="server" placeholder="(11) 7777-7777" MaxLength="15" onkeyup="formataTelefone(this, event)" BorderStyle="Ridge" meta:resourcekey="txtfoneResource1"></asp:TextBox>
                             </div>
                         </div>
 
@@ -166,7 +166,7 @@
                                 <label for="txtEnd">Logradouro:</label>
                             </div>
                             <div>
-                                <asp:TextBox runat="server" ID="txtEnd" placeholder="Rua das Maldivas" BorderStyle="Ridge" />
+                                <asp:TextBox runat="server" ID="txtEnd" placeholder="Rua das Maldivas" BorderStyle="Ridge" meta:resourcekey="txtEndResource1" />
                             </div>
                         </div>
 
@@ -175,7 +175,7 @@
                                 <label for="txtNroEnd">Número:</label>
                             </div>
                             <div>
-                                <asp:TextBox runat="server" ID="txtNroEnd" placeholder="209" MaxLength="4" onkeyup="formataInteiro(this, event)" BorderStyle="Ridge" />
+                                <asp:TextBox runat="server" ID="txtNroEnd" placeholder="209" MaxLength="4" onkeyup="formataInteiro(this, event)" BorderStyle="Ridge" meta:resourcekey="txtNroEndResource1" />
                             </div>
                         </div>
 
@@ -184,7 +184,7 @@
                                 <label for="txtBairroEnd">Bairro:</label>
                             </div>
                             <div>
-                                <asp:TextBox runat="server" ID="txtBairroEnd" placeholder="Jabaquara" BorderStyle="Ridge" />
+                                <asp:TextBox runat="server" ID="txtBairroEnd" placeholder="Jabaquara" BorderStyle="Ridge" meta:resourcekey="txtBairroEndResource1" />
                             </div>
                         </div>
 
@@ -193,7 +193,7 @@
                                 <label for="txtCid">Cidade:</label>
                             </div>
                             <div>
-                                <asp:TextBox runat="server" ID="txtCid" placeholder="São Paulo" BorderStyle="Ridge" />
+                                <asp:TextBox runat="server" ID="txtCid" placeholder="São Paulo" BorderStyle="Ridge" meta:resourcekey="txtCidResource1" />
                             </div>
                         </div>
 
@@ -202,7 +202,7 @@
                                 <label for="txtEst">Estado:</label>
                             </div>
                             <div>
-                                <asp:TextBox runat="server" ID="txtEst" placeholder="SP" MaxLength="2" BorderStyle="Ridge" />
+                                <asp:TextBox runat="server" ID="txtEst" placeholder="SP" MaxLength="2" BorderStyle="Ridge" meta:resourcekey="txtEstResource1" />
                             </div>
                         </div>
 
@@ -211,7 +211,7 @@
                                 <label for="txtDT">Data do evento:</label>
                             </div>
                             <div>
-                                <asp:TextBox runat="server" ID="txtDT" TextMode="DateTime" onkeyup="formataData(this, event)" MaxLength="10" placeholder="01/01/2017" BorderStyle="Ridge" />
+                                <asp:TextBox runat="server" ID="txtDT" TextMode="DateTime" onkeyup="formataData(this, event)" MaxLength="10" placeholder="01/01/2017" BorderStyle="Ridge" meta:resourcekey="txtDTResource1" />
                                 <br />
                             </div>
                         </div>
@@ -221,11 +221,11 @@
                 </div>
 
                 <div>
-                    <asp:Button runat="server" class="btn btn-primary" role="button" Text="Criar" ID="btnCriar" OnClick="btnCriar_Click" Visible="true" />
-                    <asp:Button runat="server" class="btn btn-primary" role="button" Text="Atualizar" ID="btnAtualiza" OnClick="btnAtualiza_Click" Visible="false" />
-                    <asp:Button Text="Voltar" class="btn btn-primary" role="button" runat="server" ID="btnVoltar" OnClick="btnVoltar_Click" formnovalidate="true" />
+                    <asp:Button runat="server" class="btn btn-primary" role="button" Text="Criar" ID="btnCriar" OnClick="btnCriar_Click" meta:resourcekey="btnCriarResource1" />
+                    <asp:Button runat="server" class="btn btn-primary" role="button" Text="Atualizar" ID="btnAtualiza" OnClick="btnAtualiza_Click" Visible="False" meta:resourcekey="btnAtualizaResource1" />
+                    <asp:Button Text="Voltar" class="btn btn-primary" role="button" runat="server" ID="btnVoltar" OnClick="btnVoltar_Click" formnovalidate="true" meta:resourcekey="btnVoltarResource1" />
                     <div>
-                        <asp:Label Text="" runat="server" ID="lblMsg" />
+                        <asp:Label runat="server" ID="lblMsg" meta:resourcekey="lblMsgResource1" />
                         <br />
                         <br />
                     </div>

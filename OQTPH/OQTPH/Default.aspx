@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="OQTPH.Default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="OQTPH.Default" culture="auto" meta:resourcekey="PageResource1" uiculture="auto" %>
 
 <!DOCTYPE html>
 
@@ -32,14 +32,14 @@
 
                         <div class="thumbnail">
 
-                            <asp:PlaceHolder ID="PHin" Visible="true" runat="server">
+                            <asp:PlaceHolder ID="PHin" runat="server">
                                 <a href="Login.aspx">Entrar</a>&emsp;
                                 <a href="Dados.aspx">Registrar</a>
                             </asp:PlaceHolder>
-                            <asp:PlaceHolder ID="PHout" runat="server" Visible="false">                                
+                            <asp:PlaceHolder ID="PHout" runat="server" Visible="False">                                
                                 <a href="Perfil.aspx">Perfil</a>&emsp;
                                 <a href="CriarEvento.aspx">Criar Evento</a>&emsp;                                
-                                <asp:LinkButton ID="aOUT" OnClick="aOUT_Click" runat="server">Sair</asp:LinkButton>
+                                <asp:LinkButton ID="aOUT" OnClick="aOUT_Click" runat="server" meta:resourcekey="aOUTResource1">Sair</asp:LinkButton>
 
                             </asp:PlaceHolder>
 
@@ -64,25 +64,25 @@
         <div class="container">
 
             <hr />
-            <asp:PlaceHolder runat="server" ID="phEv" Visible="true">
+            <asp:PlaceHolder runat="server" ID="phEv">
                 <div>
                     <div>
                         <label for="drop">Filtro:</label>
                         <div>
-                            <asp:DropDownList ID="drop" runat="server" OnSelectedIndexChanged="drop_SelectedIndexChanged" EnableViewState="true" AutoPostBack="true">
-                                <asp:ListItem Text="Todas" Value="Todas" Selected="True" />
-                                <asp:ListItem Text="Ciência/Tecnologia" Value="Ciência/Tecnologia" />
-                                <asp:ListItem Text="Show" Value="Show" />
-                                <asp:ListItem Text="Infantil" Value="Infantil" />
-                                <asp:ListItem Text="Festa" Value="Festa" />
-                                <asp:ListItem Text="Teatro" Value="Teatro" />
-                                <asp:ListItem Text="Concerto" Value="Concerto" />
-                                <asp:ListItem Text="Stand-up" Value="Stand-up" />
-                                <asp:ListItem Text="Moda/Beleza" Value="Moda/Beleza" />
-                                <asp:ListItem Text="Artes" Value="Artes" />
-                                <asp:ListItem Text="Business" Value="Business" />
-                                <asp:ListItem Text="Dança" Value="Dança" />
-                                <asp:ListItem Text="Outras" Value="Outras" />
+                            <asp:DropDownList ID="drop" runat="server" OnSelectedIndexChanged="drop_SelectedIndexChanged" EnableViewState="true" AutoPostBack="true" meta:resourcekey="dropResource1">
+                                <asp:ListItem Text="Todas" Value="Todas" Selected="True" meta:resourcekey="ListItemResource1" />
+                                <asp:ListItem Text="Ciência/Tecnologia" Value="Ciência/Tecnologia" meta:resourcekey="ListItemResource2" />
+                                <asp:ListItem Text="Show" Value="Show" meta:resourcekey="ListItemResource3" />
+                                <asp:ListItem Text="Infantil" Value="Infantil" meta:resourcekey="ListItemResource4" />
+                                <asp:ListItem Text="Festa" Value="Festa" meta:resourcekey="ListItemResource5" />
+                                <asp:ListItem Text="Teatro" Value="Teatro" meta:resourcekey="ListItemResource6" />
+                                <asp:ListItem Text="Concerto" Value="Concerto" meta:resourcekey="ListItemResource7" />
+                                <asp:ListItem Text="Stand-up" Value="Stand-up" meta:resourcekey="ListItemResource8" />
+                                <asp:ListItem Text="Moda/Beleza" Value="Moda/Beleza" meta:resourcekey="ListItemResource9" />
+                                <asp:ListItem Text="Artes" Value="Artes" meta:resourcekey="ListItemResource10" />
+                                <asp:ListItem Text="Business" Value="Business" meta:resourcekey="ListItemResource11" />
+                                <asp:ListItem Text="Dança" Value="Dança" meta:resourcekey="ListItemResource12" />
+                                <asp:ListItem Text="Outras" Value="Outras" meta:resourcekey="ListItemResource13" />
                             </asp:DropDownList>
                         </div>
                     </div>
@@ -111,7 +111,7 @@
                                         <li><a runat="server" id="Aant" href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span> </a></li>
                                         <li class="active">
                                             <a href="#">
-                                                <asp:Label ID="lbCur" runat="server" /></a></li>
+                                                <asp:Label ID="lbCur" runat="server" meta:resourcekey="lbCurResource1" /></a></li>
                                         <li><a runat="server" id="Aprox" href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span> </a></li>
                                     </ul>
                                 </nav>
@@ -120,7 +120,7 @@
                     </div>
                 </div>
             </asp:PlaceHolder>
-            <asp:Label ID="lblMsg" runat="server" Visible="false" />
+            <asp:Label ID="lblMsg" runat="server" Visible="False" meta:resourcekey="lblMsgResource1" />
 
             <hr />
         </div>

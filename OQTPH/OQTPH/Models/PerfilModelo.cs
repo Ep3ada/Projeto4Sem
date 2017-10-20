@@ -10,5 +10,6 @@ namespace OQTPH.Models
         List<EventoModelo> eventosComprados;
         List<EventoModelo> eventosCriados;
         List<EventoModelo> eventosFiltrados;
+        UsuarioModelo usuario;
     }
 }

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Perfil.aspx.cs" Inherits="OQTPH.Perfil" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Perfil.aspx.cs" Inherits="OQTPH.Perfil" culture="auto" meta:resourcekey="PageResource1" uiculture="auto" %>
 
 <!DOCTYPE html>
 
@@ -37,7 +37,7 @@
                             <a href="CriaEvento.aspx">Criar Evento</a>&emsp;&emsp;
                             <a href="Perfil.aspx">Perfil</a>&emsp;&emsp;
                             
-                            <asp:LinkButton ID="LinkButton1" OnClick="aOUT_Click" runat="server">Sair</asp:LinkButton>
+                            <asp:LinkButton ID="LinkButton1" OnClick="aOUT_Click" runat="server" meta:resourcekey="LinkButton1Resource1">Sair</asp:LinkButton>
 
                         </div>
                     </ul>
@@ -63,15 +63,15 @@
                 <hr />
                 <div>
                     <div>
-                        <asp:Label ID="lblNome" runat="server"></asp:Label>
+                        <asp:Label ID="lblNome" runat="server" meta:resourcekey="lblNomeResource1"></asp:Label>
 
                     </div>
                     <div>
-                        <asp:Label ID="lblUserN" runat="server"></asp:Label>
+                        <asp:Label ID="lblUserN" runat="server" meta:resourcekey="lblUserNResource1"></asp:Label>
 
                     </div>
                     <div>
-                        <asp:Label ID="lblEmail" runat="server"></asp:Label>
+                        <asp:Label ID="lblEmail" runat="server" meta:resourcekey="lblEmailResource1"></asp:Label>
 
                         <br />
 
@@ -79,14 +79,14 @@
 
                     <div>
                         <!-- esse botão é pra editar a conta-->
-                        <asp:Button ID="btnEditar" runat="server" class="btn btn-primary" role="button" Text="Editar" OnClick="btnEditar_Click" />
+                        <asp:Button ID="btnEditar" runat="server" class="btn btn-primary" role="button" Text="Editar" OnClick="btnEditar_Click" meta:resourcekey="btnEditarResource1" />
                         <br />
                     </div>
                     <div>
                         <!-- esse botão é pra editar a conta-->
-                        <asp:Button ID="btnDelete" runat="server" class="btn btn-primary" role="button" Text="Apagar Perfil" OnClick="btnDelete_Click" />
+                        <asp:Button ID="btnDelete" runat="server" class="btn btn-primary" role="button" Text="Apagar Perfil" OnClick="btnDelete_Click" meta:resourcekey="btnDeleteResource1" />
                         <br />
-                        <asp:Label ID="lblMsg" runat="server" Visible="false"></asp:Label>
+                        <asp:Label ID="lblMsg" runat="server" Visible="False" meta:resourcekey="lblMsgResource1"></asp:Label>
                     </div>
 
                     <div style="margin: 5px">
@@ -99,23 +99,23 @@
                                     <%for (int i = 0; i < _eventosCriados.Count; i++)
                                         {%>
                                     <tr>
-                                        <td><%=_eventosCriados[i].eventoNome %></td>
-                                        <td><%=_eventosCriados[i].eventoData.Date.ToString("d")%></td>
+                                        <td><%=_eventosCriados[i].Nome %></td>
+                                        <td><%=_eventosCriados[i].Data.Date.ToString("d")%></td>
 
-                                        <td><%=_eventosCriados[i].eventoData.TimeOfDay%></td>
+                                        <td><%=_eventosCriados[i].Data.TimeOfDay%></td>
 
-                                        <td><a href="Evento.aspx?evento=<%=_eventosCriados[i].eventoID %>">Acessar</a></td>
+                                        <td><a href="Evento.aspx?evento=<%=_eventosCriados[i].Id %>">Acessar</a></td>
                                     </tr>
                                     <% } %>
                                 </tbody>
                             </table>
                             <div>
-                                <asp:Button ID="btnDEC" runat="server" class="btn btn-primary" role="button" OnClick="btnDEC_Click" Text="Apagar Evento" />
-                                <asp:DropDownList runat="server" ID="dropEC">
+                                <asp:Button ID="btnDEC" runat="server" class="btn btn-primary" role="button" OnClick="btnDEC_Click" Text="Apagar Evento" meta:resourcekey="btnDECResource1" />
+                                <asp:DropDownList runat="server" ID="dropEC" meta:resourcekey="dropECResource1">
                                 </asp:DropDownList>
                             </div>
                         </div>
-                        <asp:Label Text="Não há nenhum!" ID="lblEC" runat="server" Visible="false" />
+                        <asp:Label Text="Não há nenhum!" ID="lblEC" runat="server" Visible="False" meta:resourcekey="lblECResource1" />
                     </div>
 
 
@@ -137,17 +137,17 @@
                                         <%for (int i = 0; i < _eventosAdquiridos.Count; i++)
                                             {%>
                                         <tr>
-                                            <td><%=_eventosAdquiridos[i].eventoNome %>&nbsp;</td>
-                                            <td><%=_eventosAdquiridos[i].eventoData.Date.ToString("d")%> <%=_eventosAdquiridos[i].eventoData.TimeOfDay%>&nbsp;</td>
+                                            <td><%=_eventosAdquiridos[i].Nome %>&nbsp;</td>
+                                            <td><%=_eventosAdquiridos[i].Data.Date.ToString("d")%> <%=_eventosAdquiridos[i].Data.TimeOfDay%>&nbsp;</td>
                                             <br />
-                                            <td>Comprou em:<%=_eventosAdquiridos[i].eventoDataCompra.Date.ToString("d") %> </td>
+                                            <td>Comprou em:<%=_eventosAdquiridos[i].DataCompra.Date.ToString("d") %> </td>
                                             <br />
-                                            <td>&nbsp;<a href="Evento.aspx?evento=<%=_eventosAdquiridos[i].eventoID %>">Acessar</a></td>
+                                            <td>&nbsp;<a href="Evento.aspx?evento=<%=_eventosAdquiridos[i].Id %>">Acessar</a></td>
                                         </tr>
                                         <% } %>
                                     </tbody>
                                 </table>
-                                <asp:Label Text="Não há nenhum!" ID="lblIA" runat="server" Visible="false" />
+                                <asp:Label Text="Não há nenhum!" ID="lblIA" runat="server" Visible="False" meta:resourcekey="lblIAResource1" />
                             </div>
                         </div>
 
@@ -158,23 +158,23 @@
                             <br />
                             <br />
                             <br />
-                            <asp:DropDownList ID="drop" runat="server">
-                                <asp:ListItem Text="Selecione" Value="Selecione" Selected="True" />
-                                <asp:ListItem Text="Ciência/Tecnologia" Value="Ciência/Tecnologia" />
-                                <asp:ListItem Text="Show" Value="Show" />
-                                <asp:ListItem Text="Infantil" Value="Infantil" />
-                                <asp:ListItem Text="Festa" Value="Festa" />
-                                <asp:ListItem Text="Teatro" Value="Teatro" />
-                                <asp:ListItem Text="Concerto" Value="Concerto" />
-                                <asp:ListItem Text="Stand-up" Value="Stand-up" />
-                                <asp:ListItem Text="Moda/Beleza" Value="Moda/Beleza" />
-                                <asp:ListItem Text="Artes" Value="Artes" />
-                                <asp:ListItem Text="Business" Value="Business" />
-                                <asp:ListItem Text="Dança" Value="Dança" />
-                                <asp:ListItem Text="Outras" Value="Outras" />
+                            <asp:DropDownList ID="drop" runat="server" meta:resourcekey="dropResource1">
+                                <asp:ListItem Text="Selecione" Value="Selecione" Selected="True" meta:resourcekey="ListItemResource1" />
+                                <asp:ListItem Text="Ciência/Tecnologia" Value="Ciência/Tecnologia" meta:resourcekey="ListItemResource2" />
+                                <asp:ListItem Text="Show" Value="Show" meta:resourcekey="ListItemResource3" />
+                                <asp:ListItem Text="Infantil" Value="Infantil" meta:resourcekey="ListItemResource4" />
+                                <asp:ListItem Text="Festa" Value="Festa" meta:resourcekey="ListItemResource5" />
+                                <asp:ListItem Text="Teatro" Value="Teatro" meta:resourcekey="ListItemResource6" />
+                                <asp:ListItem Text="Concerto" Value="Concerto" meta:resourcekey="ListItemResource7" />
+                                <asp:ListItem Text="Stand-up" Value="Stand-up" meta:resourcekey="ListItemResource8" />
+                                <asp:ListItem Text="Moda/Beleza" Value="Moda/Beleza" meta:resourcekey="ListItemResource9" />
+                                <asp:ListItem Text="Artes" Value="Artes" meta:resourcekey="ListItemResource10" />
+                                <asp:ListItem Text="Business" Value="Business" meta:resourcekey="ListItemResource11" />
+                                <asp:ListItem Text="Dança" Value="Dança" meta:resourcekey="ListItemResource12" />
+                                <asp:ListItem Text="Outras" Value="Outras" meta:resourcekey="ListItemResource13" />
                             </asp:DropDownList>
 
-                            <asp:Button ID="btn" runat="server" class="btn btn-primary" role="button" OnClick="btn_Click" Text="Criar filtro" />
+                            <asp:Button ID="btn" runat="server" class="btn btn-primary" role="button" OnClick="btn_Click" Text="Criar filtro" meta:resourcekey="btnResource1" />
                         </div>
 
                         <div>
@@ -186,18 +186,18 @@
                                             <%for (int i = 0; i < _eventosAlerta.Count; i++)
                                                 {%>
                                             <tr>
-                                                <td><%=_eventosAlerta[i].eventoNome %></td>
+                                                <td><%=_eventosAlerta[i].Nome %></td>
                                                 <br />
-                                                <td><%=_eventosAlerta[i].eventoData.Date.ToString("d")%></td>
+                                                <td><%=_eventosAlerta[i].Data.Date.ToString("d")%></td>
                                                 <br />
-                                                <td><a href="Evento.aspx?evento=<%=_eventosAlerta[i].eventoID %>">Acessar</a></td>
+                                                <td><a href="Evento.aspx?evento=<%=_eventosAlerta[i].Id %>">Acessar</a></td>
                                             </tr>
                                             <% } %>
                                         </tbody>
                                     </table>
                                 </div>
 
-                                <asp:Label Text="Não há Nenhum!" ID="lblEP" runat="server" Visible="false" />
+                                <asp:Label Text="Não há Nenhum!" ID="lblEP" runat="server" Visible="False" meta:resourcekey="lblEPResource1" />
                             </div>
                         </div>
                     </div>

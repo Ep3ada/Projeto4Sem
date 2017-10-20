@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Evento.aspx.cs" Inherits="OQTPH.Evento" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Evento.aspx.cs" Inherits="OQTPH.Evento" culture="auto" meta:resourcekey="PageResource1" uiculture="auto" %>
 
 <!DOCTYPE html>
 
@@ -13,7 +13,7 @@
     <link href="/assets/css/style.css" rel="stylesheet" runat="server" />
     <link rel="icon" type="image/x-icon" href="/assets/images/logoAba.ico" />
     <style type="text/css">
-</style>
+    </style>
 
 </head>
 <body>
@@ -36,15 +36,15 @@
 
                         <div class="thumbnail">
 
-                            <asp:PlaceHolder ID="PHin" Visible="true" runat="server">
+                            <asp:PlaceHolder ID="PHin" runat="server">
                                 <a href="Login.aspx">Entrar</a>&emsp;&emsp;
                                 <a href="Dados.aspx">Registrar</a>
                             </asp:PlaceHolder>
-                            <asp:PlaceHolder ID="PHout" runat="server" Visible="false">
+                            <asp:PlaceHolder ID="PHout" runat="server" Visible="False">
                                 <a href="CriaEvento.aspx">Criar Evento</a>&emsp;&emsp;
                                 <a href="Perfil.aspx">Perfil</a>&emsp;&emsp;
                                
-                                <asp:LinkButton ID="aOUT" OnClick="aOUT_Click" runat="server">Sair</asp:LinkButton>
+                                <asp:LinkButton ID="aOUT" OnClick="aOUT_Click" runat="server" meta:resourcekey="aOUTResource1">Sair</asp:LinkButton>
 
                             </asp:PlaceHolder>
 
@@ -79,90 +79,90 @@
                         <div>
                             <label for="lblNome">Nome:</label>
                             <div>
-                                <asp:Label runat="server" ID="lblNome"></asp:Label>
+                                <asp:Label runat="server" ID="lblNome" meta:resourcekey="lblNomeResource1"></asp:Label>
                             </div>
                         </div>
 
                         <div>
                             <label for="lblDesc">Descrição:</label>
                             <div>
-                                <asp:Label runat="server" ID="lblDesc"></asp:Label>
+                                <asp:Label runat="server" ID="lblDesc" meta:resourcekey="lblDescResource1"></asp:Label>
                             </div>
                         </div>
 
                         <div>
                             <label for="lblVal">Valor:</label>
                             <div>
-                                <asp:Label runat="server" ID="lblVal"></asp:Label>
+                                <asp:Label runat="server" ID="lblVal" meta:resourcekey="lblValResource1"></asp:Label>
                             </div>
                         </div>
 
                         <div>
                             <label for="lblCat">Categoria:</label>
                             <div>
-                                <asp:Label runat="server" ID="lblCat"></asp:Label>
+                                <asp:Label runat="server" ID="lblCat" meta:resourcekey="lblCatResource1"></asp:Label>
                             </div>
                         </div>
 
                         <div>
                             <label for="lblIngres">Ingressos Disponíveis:</label>
                             <div>
-                                <asp:Label runat="server" ID="lblIngres"></asp:Label>
+                                <asp:Label runat="server" ID="lblIngres" meta:resourcekey="lblIngresResource1"></asp:Label>
                             </div>
                         </div>
 
                         <div>
                             <label for="lblDT">Data:</label>
                             <div>
-                                <asp:Label runat="server" ID="lblDT"></asp:Label>
+                                <asp:Label runat="server" ID="lblDT" meta:resourcekey="lblDTResource1"></asp:Label>
                             </div>
                         </div>
 
                         <div>
                             <label for="lblHora">Hora:</label>
                             <div>
-                                <asp:Label runat="server" ID="lblHora"></asp:Label>
+                                <asp:Label runat="server" ID="lblHora" meta:resourcekey="lblHoraResource1"></asp:Label>
                             </div>
                         </div>
 
                         <div>
                             <label for="lblLocal">Local:</label>
                             <div>
-                                <asp:Label runat="server" ID="lblLocal"></asp:Label>
+                                <asp:Label runat="server" ID="lblLocal" meta:resourcekey="lblLocalResource1"></asp:Label>
                             </div>
                         </div>
 
                         <div>
                             <label for="lblFone">Telefone:</label>
                             <div>
-                                <asp:Label runat="server" ID="lblFone"></asp:Label>
+                                <asp:Label runat="server" ID="lblFone" meta:resourcekey="lblFoneResource1"></asp:Label>
                             </div>
                         </div>
 
                         <div>
                             <label for="lblCriador">Criador:</label>
                             <div>
-                                <asp:Label runat="server" ID="lblCriador"></asp:Label>
+                                <asp:Label runat="server" ID="lblCriador" meta:resourcekey="lblCriadorResource1"></asp:Label>
                             </div>
                         </div>
                     </div>
 
                     <div id="div2" runat="server">
                        
-                            <asp:Button ID="btn" runat="server" class="btn btn-primary" role="button" Text="Adquirir" OnClick="btn_Click" Visible="true" />&emsp;
+                            <asp:Button ID="btn" runat="server" class="btn btn-primary" role="button" Text="Adquirir" OnClick="btn_Click" meta:resourcekey="btnResource1" />&emsp;
                        
-                            <asp:Button ID="btnEdit" runat="server" class="btn btn-primary" role="button" Text="Editar" OnClick="btnEdit_Click" Visible="false" />&emsp;
+                            <asp:Button ID="btnEdit" runat="server" class="btn btn-primary" role="button" Text="Editar" OnClick="btnEdit_Click" Visible="False" meta:resourcekey="btnEditResource1" />&emsp;
                         
                         
-                            <asp:Button ID="btnD" runat="server" class="btn btn-primary" role="button" Text="Devolver" OnClick="btnD_Click" Visible="false" />&emsp;
+                            <asp:Button ID="btnD" runat="server" class="btn btn-primary" role="button" Text="Devolver" OnClick="btnD_Click" Visible="False" meta:resourcekey="btnDResource1" />&emsp;
                         
                         
-                            <asp:Button ID="btnVoltar" runat="server" class="btn btn-primary" role="button" Text="Voltar" OnClick="btnVoltar_Click" />
+                            <asp:Button ID="btnVoltar" runat="server" class="btn btn-primary" role="button" Text="Voltar" OnClick="btnVoltar_Click" meta:resourcekey="btnVoltarResource1" />
                         
                     </div>
 
                     <div>
-                        <asp:Label ID="lblMsg" runat="server"></asp:Label>
+                        <asp:Label ID="lblMsg" runat="server" meta:resourcekey="lblMsgResource1"></asp:Label>
                     </div>
                 </div>
             </div>
@@ -173,7 +173,7 @@
                     <div class="row">
                         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-5">
                             <address>
-                                <strong>O que tem pra hoje?, Inc.</strong><br />
+                                <strong>O que tem pra hoje?, Inc.rong><br />
                                 Digital School<br />
                                 R. Estela, 268, SP, 04011-001<br />
                             </address>

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Dados.aspx.cs" Inherits="OQTPH.Dados" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Dados.aspx.cs" Inherits="OQTPH.Dados" culture="auto" meta:resourcekey="PageResource1" uiculture="auto" %>
 
 <!DOCTYPE html>
 
@@ -13,7 +13,7 @@
     <link href="/assets/css/style.css" rel="stylesheet" runat="server" />
     <link rel="icon" type="image/x-icon" href="/assets/images/logoAba.ico" />
     <style type="text/css">
-</style>
+    </style>
 
 </head>
 <body>
@@ -37,15 +37,15 @@
                         <div class="thumbnail">
 
 
-                            <asp:PlaceHolder ID="PHin" Visible="true" runat="server">
+                            <asp:PlaceHolder ID="PHin" runat="server">
                                 <a href="Login.aspx">Entrar</a>&emsp;&emsp;
                                 <a href="Dados.aspx">Registrar</a>
                             </asp:PlaceHolder>
-                            <asp:PlaceHolder ID="PHout" runat="server" Visible="false">
+                            <asp:PlaceHolder ID="PHout" runat="server" Visible="False">
                                 <a href="CriarEvento.aspx">Criar Evento</a>&emsp;&emsp;
                                 <a href="Perfil.aspx">Perfil</a>&emsp;&emsp;
                                 
-                                <asp:LinkButton ID="aOUT" OnClick="aOUT_Click" runat="server">Sair</asp:LinkButton>
+                                <asp:LinkButton ID="aOUT" OnClick="aOUT_Click" runat="server" meta:resourcekey="aOUTResource1">Sair</asp:LinkButton>
 
                             </asp:PlaceHolder>
 
@@ -76,15 +76,15 @@
 
                 <div>
 
-                    <asp:PlaceHolder runat="server" ID="ph1" Visible="false">
-                        <asp:Label Text="Nome atual: " runat="server" />
-                        <asp:Label ID="lblNome" runat="server" />
+                    <asp:PlaceHolder runat="server" ID="ph1" Visible="False">
+                        <asp:Label Text="Nome atual: " runat="server" meta:resourcekey="LabelResource1" />
+                        <asp:Label ID="lblNome" runat="server" meta:resourcekey="lblNomeResource1" />
                     </asp:PlaceHolder>
 
                     <div>
                         <label for="txtNome">Nome:</label>
                         <div>
-                            <asp:TextBox runat="server" ID="txtNome" MaxLength="30" />
+                            <asp:TextBox runat="server" ID="txtNome" MaxLength="30" meta:resourcekey="txtNomeResource1" />
                         </div>
                     </div>
 
@@ -92,15 +92,15 @@
 
                 <div>
 
-                    <asp:PlaceHolder runat="server" ID="ph2" Visible="false">
-                        <asp:Label Text="Email Atual: " runat="server" />
-                        <asp:Label ID="lblEmail" runat="server" />
+                    <asp:PlaceHolder runat="server" ID="ph2" Visible="False">
+                        <asp:Label Text="Email Atual: " runat="server" meta:resourcekey="LabelResource2" />
+                        <asp:Label ID="lblEmail" runat="server" meta:resourcekey="lblEmailResource1" />
                     </asp:PlaceHolder>
 
                     <div>
                         <label for="txtEmail">Email:</label>
                         <div>
-                            <asp:TextBox runat="server" ID="txtEmail" />
+                            <asp:TextBox runat="server" ID="txtEmail" meta:resourcekey="txtEmailResource1" />
                         </div>
                     </div>
 
@@ -108,16 +108,16 @@
 
                 <div>
 
-                    <asp:PlaceHolder runat="server" ID="ph3" Visible="false">
-                        <asp:Label Text="Username Atual: " runat="server" />
-                        <asp:Label ID="lblUserN" runat="server" />
+                    <asp:PlaceHolder runat="server" ID="ph3" Visible="False">
+                        <asp:Label Text="Username Atual: " runat="server" meta:resourcekey="LabelResource3" />
+                        <asp:Label ID="lblUserN" runat="server" meta:resourcekey="lblUserNResource1" />
                     </asp:PlaceHolder>
 
                     <div>
                         <label for="txtUserN">Username:</label>
 
                         <div>
-                            <asp:TextBox runat="server" ID="txtUserN" MaxLength="15" />
+                            <asp:TextBox runat="server" ID="txtUserN" MaxLength="15" meta:resourcekey="txtUserNResource1" />
                         </div>
                     </div>
 
@@ -127,18 +127,18 @@
                     <div>
                         <label for="txtSenha">Senha:</label>
                     </div>
-                    <asp:TextBox runat="server" ID="txtSenha" TextMode="Password" MaxLength="100" />
+                    <asp:TextBox runat="server" ID="txtSenha" TextMode="Password" MaxLength="100" meta:resourcekey="txtSenhaResource1" />
                     <br />
                     <br />
                 </div>
 
                 <div>
-                    <asp:Button runat="server" class="btn btn-primary" role="button" Text="Criar" ID="btn" OnClick="btn_Click" Visible="true" />&emsp;
-                    <asp:Button runat="server" class="btn btn-primary" role="button" Text="Atualizar" ID="btnUp" OnClick="btnUp_Click" Visible="false" />&emsp;
-                    <asp:Button Text="Voltar" class="btn btn-primary" role="button" runat="server" ID="btnVoltar" OnClick="btnVoltar_Click" formnovalidate="true" />
+                    <asp:Button runat="server" class="btn btn-primary" role="button" Text="Criar" ID="btn" OnClick="btn_Click" meta:resourcekey="btnResource1" />&emsp;
+                    <asp:Button runat="server" class="btn btn-primary" role="button" Text="Atualizar" ID="btnUp" OnClick="btnUp_Click" Visible="False" meta:resourcekey="btnUpResource1" />&emsp;
+                    <asp:Button Text="Voltar" class="btn btn-primary" role="button" runat="server" ID="btnVoltar" OnClick="btnVoltar_Click" formnovalidate="true" meta:resourcekey="btnVoltarResource1" />
                 </div>
                 <div>
-                    <asp:Label Text="" runat="server" ID="lblMsg" />
+                    <asp:Label runat="server" ID="lblMsg" meta:resourcekey="lblMsgResource1" />
                 </div>
                 <hr />
             </div>
@@ -147,7 +147,7 @@
                     <div class="row">
                         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-5">
                             <address>
-                                <strong>O que tem pra hoje?, Inc.</strong><br />
+                                <strong>O que tem pra hoje?, Inc.rong><br />
                                 Digital School<br />
                                 R. Estela, 268, SP, 04011-001<br />
                             </address>

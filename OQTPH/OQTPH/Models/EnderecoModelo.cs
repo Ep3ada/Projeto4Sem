@@ -5,7 +5,7 @@ using System.Web;
 
 namespace OQTPH.Models
 {
-    public class Endereco
+    public class EnderecoModelo
     {
         int Id { get; set; }
         int Numero { get; set; }

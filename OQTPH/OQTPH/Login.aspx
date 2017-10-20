@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="OQTPH.Login" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="OQTPH.Login" culture="auto" meta:resourcekey="PageResource1" uiculture="auto" %>
 
 <!DOCTYPE html>
 
@@ -13,7 +13,7 @@
     <link href="/assets/css/style.css" rel="stylesheet" runat="server" />
     <link rel="icon" type="image/x-icon" href="/assets/images/logoAba.ico" />
     <style type="text/css">
-</style>
+    </style>
 
 </head>
 <body>
@@ -65,7 +65,7 @@
                     <div>
                         <label for="txtUserN">Username</label>
                         <div>
-                            <asp:TextBox runat="server" ID="txtUserN" required="true" MaxLength="15" />
+                            <asp:TextBox runat="server" ID="txtUserN" required="true" MaxLength="15" meta:resourcekey="txtUserNResource1" />
                         </div>
                     </div>
 
@@ -73,17 +73,17 @@
                         <label for="txtSenha">Senha</label>
 
                         <div>
-                            <asp:TextBox runat="server" ID="txtSenha" TextMode="Password" required="true" />
+                            <asp:TextBox runat="server" ID="txtSenha" TextMode="Password" required="true" meta:resourcekey="txtSenhaResource1" />
                             <br />
                         </div>
                     </div>
 
                     <div>
-                        <asp:Button Text="Logar" runat="server" class="btn btn-primary" role="button" ID="btnLogar" OnClick="btnLogar_Click" />
-                        <asp:Button Text="Voltar" runat="server" class="btn btn-primary" role="button" ID="btnVoltar" OnClick="btnVoltar_Click" formnovalidate="true" />
+                        <asp:Button Text="Logar" runat="server" class="btn btn-primary" role="button" ID="btnLogar" OnClick="btnLogar_Click" meta:resourcekey="btnLogarResource1" />
+                        <asp:Button Text="Voltar" runat="server" class="btn btn-primary" role="button" ID="btnVoltar" OnClick="btnVoltar_Click" formnovalidate="true" meta:resourcekey="btnVoltarResource1" />
                     </div>
                     <div>
-                        <asp:Label ID="lblMsg" runat="server" />
+                        <asp:Label ID="lblMsg" runat="server" meta:resourcekey="lblMsgResource1" />
                     </div>
                 </div>
                 <hr />
@@ -93,7 +93,7 @@
             <div class="row">
                 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-5">
                     <address>
-                        <strong>O que tem pra hoje?, Inc.</strong><br />
+                        <strong>O que tem pra hoje?, Inc.rong><br />
                         Digital School<br />
                         R. Estela, 268, SP, 04011-001<br />
                     </address>
