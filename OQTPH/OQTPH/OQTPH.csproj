@@ -140,9 +140,9 @@
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Models\EnderecoModelo.cs" />
-    <Compile Include="Models\Evento\ICarregar.cs" />
-    <Compile Include="Models\Evento\EventoModelo.cs" />
-    <Compile Include="Models\Evento\ISalvar.cs" />
+    <Compile Include="Utils\ICarregar.cs" />
+    <Compile Include="Models\EventoModelo.cs" />
+    <Compile Include="Utils\ISalvar.cs" />
     <Compile Include="Models\PerfilModelo.cs" />
     <Compile Include="Models\UsuarioModelo.cs" />
     <Compile Include="Perfil.aspx.cs">

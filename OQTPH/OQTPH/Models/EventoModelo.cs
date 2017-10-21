@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using OQTPH.Models;
-using OQTPH.Models.Evento;
 using System.Web;
+using OQTPH.Utils;
 
-namespace OQTPH
+namespace OQTPH.Models
 {
     public class EventoModelo
     {

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace OQTPH.Models.Evento
+namespace OQTPH.Utils
 {
     public interface ISalvar
     {

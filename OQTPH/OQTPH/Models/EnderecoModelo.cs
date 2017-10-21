@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
+using OQTPH.Utils;
 
 namespace OQTPH.Models
 {
@@ -13,5 +13,8 @@ namespace OQTPH.Models
         string Bairro { get; set; }
         string Cidade { get; set; }
         string Estado { get; set; }
+        
+        
+
     }
 }
